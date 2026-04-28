@@ -2,6 +2,11 @@ import {useForm} from "react-hook-form"
 import "./App.css"
 import { yupResolver } from "@hookform/resolvers/yup";
 import { UserSchema } from "./validators/UserSchema";
+// type FormType={
+//     name:strin,
+//     age:number,
+
+// }
 const HookForm=()=>{
 
     const {handleSubmit,register,formState}=useForm({
@@ -25,6 +30,13 @@ const HookForm=()=>{
                 {errors.name && <p className="error-msg">{errors.name.message}</p>}
                 <input type="text" {...register("age")}/>
                    {errors.age && <p className="error-msg">{errors.age.message}</p>}
+              <input type="password" {...register("password")}/>
+                   {errors.password && <p className="error-msg">{errors.password.message}</p>}
+              <input type="password" {...register("confirmpassword")}/>
+                   {errors.confirmpassword && <p className="error-msg">{errors.confirmpassword.message}</p>}
+             
+              <input type="text" {...register("email")}/>
+                   {errors.email && <p className="error-msg">{errors.email.message}</p>}
              
                 <input type="submit"/>
 
