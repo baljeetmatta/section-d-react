@@ -1,6 +1,6 @@
 import * as yup from "yup"
 import { passwordSchema } from "./passwordSchema"
-
+//zod
 export const UserSchema=yup.object({
     name:yup.string()
     .required("Name must be required")  
